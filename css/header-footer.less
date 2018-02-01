@@ -1,0 +1,270 @@
+/*//////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+YORG DAIRY
+
+Theme Name: Avada Child Theme
+Author: Tom Brookes & Tom Dent
+Author URI: http://www.doubledcreative.com
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+CONTENTS
+
+- Header
+- Footer
+- Media Queries
+	- 800px
+	- 1024px (Mobile Header Switch)
+	- 800px
+	
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+/* HEADER */
+
+/* Main Header */
+.fusion-header-wrapper{
+	.fusion-header-v7{
+		.fusion-header{
+			.fusion-row{
+				.fusion-main-menu{
+					.fusion-menu, .fusion-mobile-menu{
+						.menu-item{
+							a{.uppercase(); -webkit-font-smoothing: antialiased;
+								.menu-text{-webkit-font-smoothing: antialiased;}
+							}	
+							.sub-menu{margin-left: -18px;
+								.menu-item{margin-right: 0px!important;
+									&:last-of-type{
+										a{border-bottom: none!important;}
+									}
+									a{.font-mon(); font-size: 13px!important;
+										&:hover{color: @white;}
+									}
+								}
+								.current-menu-item{
+									a{color: @white;}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+/* FOOTER */
+
+.fusion-footer{
+	.fusion-footer-widget-area{padding: 0px!important;
+		.fusion-row{
+			.fusion-widget-area{
+				.fusion-column{margin-bottom: 0!important;
+					.organic-logo{padding: 50px 0 30px!important;
+						svg{margin: 0 auto;}
+					}
+					.contact-details{padding: 0 30px!important;
+						.contact-details-column{margin-top: 35px!important;
+							.tel, .email{color: @darkgrey; .font-mon(); margin: 0!important; font-size: 14px; line-height: 20px!important; display: inline-block;}
+							a{color: @darkgrey;
+								&:hover{opacity: 0.8;}
+							}
+						}
+					}	
+				}
+			}
+		}
+	}
+}
+
+/* COPYRIGHT */
+
+.fusion-footer{
+	.fusion-footer-copyright-area{
+		.fusion-row{
+			.fusion-copyright-content{
+				.fusion-copyright-notice{.montserrat(); .uppercase(); line-height: 14px; letter-spacing: 1px;
+					a{.montserrat(); .uppercase(); letter-spacing: 1px;
+						&:hover{text-decoration: underline}
+					}
+				}
+			}	
+		}
+	}
+}
+
+
+
+
+
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////// */
+/* MEDIA QUERIES 1200px ///////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+@media only screen and (min-width: 1200px) {
+	
+	
+	/* HEADER */
+
+	/* Main Header */
+	.fusion-header-wrapper{
+		.fusion-header-v7{
+			.fusion-header{
+				.fusion-row{
+					.fusion-main-menu{
+						.fusion-menu, .fusion-mobile-menu{
+							.menu-item{margin-left: 8px!important; margin-right: 8px!important;
+								a{font-size: 16px!important;}		
+							}
+							.sub-menu{
+								.menu-item{margin-left: 0px!important; margin-right: 0px!important;
+									a{.font-mon(); font-size: 13px!important;
+										&:hover{color: @white;}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+		
+	
+}
+
+
+
+
+
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////// */
+/* MEDIA QUERIES 1024px ///////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+@media only screen and (max-width: 1024px) {
+	
+	
+	/* MOBILE HEADER */
+
+	.fusion-mobile-menu-design-modern{
+		.fusion-header{
+			.fusion-row{
+				.fusion-mobile-menu-icons{
+					.fusion-icon{padding: 0; margin: -21px -16px; font-size: 26px; height: 60px; width: 60px; line-height: 60px; text-align: center;	}
+				}
+				.fusion-mobile-nav-holder{
+					.fusion-mobile-menu{
+						.fusion-mobile-nav-item{
+							a{
+								&:hover{
+									.menu-text{}
+								}
+								.menu-text{.font-mon(); .uppercase();}
+							}
+							.fusion-open-submenu{padding-left: 30px!important; padding-right: 46px!important;}
+							.sub-menu{
+								.fusion-mobile-nav-item{
+									a{.font-mon(); font-size: 11px!important; background-color: #dfbea6!important;}	
+								}
+							}			
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	
+}
+
+
+
+
+
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////// */
+/* MEDIA QUERIES 800px ////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+@media only screen and (max-width: 800px) {
+	
+	
+	/* MOBILE HEADER */
+
+	.fusion-mobile-menu-design-modern{
+		.fusion-header{padding-left: 20px!important; padding-right: 20px!important;}
+	}
+	
+	
+	////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+	/* FOOTER */
+	
+	.fusion-footer{
+		.fusion-footer-widget-area{
+			.fusion-row{
+				.fusion-widget-area{
+					.fusion-column{
+						.organic-logo{padding: 35px 0 25px!important;}
+					}
+				}
+			}
+		}
+	}
+
+	
+}
+
+
+
+
+
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////// */
+/* MEDIA QUERIES 500px ////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+@media only screen and (max-width: 500px) {
+	
+	
+	/* FOOTER */
+	
+	.fusion-footer{
+		.fusion-footer-widget-area{
+			.fusion-row{
+				.fusion-widget-area{
+					.fusion-column{
+						.contact-details{padding: 0 30px!important;
+							.contact-details-column{margin-bottom: 15px!important;
+								.tel, .email{display: block; zoom: 0.9;}
+							}
+						}	
+						.organic-logo{padding: 45px 0 30px!important; zoom: 0.8}
+					}
+				}
+			}
+		}
+	}
+
+	
+}
