@@ -1,0 +1,271 @@
+/*//////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+YORG DAIRY
+
+Theme Name: Avada Child Theme
+Author: Tom Brookes & Tom Dent
+Author URI: http://www.doubledcreative.com
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+CONTENTS
+
+- Form Colours
+- Form Mixins
+- Validation Mixins
+- Validation Styling
+- Gravity Form Styling
+- Media Queries
+	- 800px
+	
+
+//////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+/* FORM COLOURS */
+
+@focus-colour:  		#fff8db!important;		/* Focus Background Colour */
+@validation-colour:  	@beige!important;		/* Validation Background Colour */
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+/* FORM MIXINS */
+
+/* Font Styling */
+.form-font(){
+	.font-mon();
+	font-size: 14px!important;
+	line-height: 18px!important;
+	text-transform: uppercase!important;
+	letter-spacing: 0!important;
+	color: @darkgrey;
+}
+
+/* Border Width */
+.form-border(@border: 0){
+	border-width: @border!important;
+	border-color: @stone!important;
+	border-style: solid!important;
+}
+
+/* Border Radius */
+.form-border-radius(@border-radius: 3px){
+	-webkit-border-radius:@border-radius!important;
+	-moz-border-radius:@border-radius!important;
+	border-radius:@border-radius!important;
+}
+
+/* Input Box Height */
+.form-input-height(){
+	height: 55px!important;
+}
+
+/* Placeholder Font Colour */
+.placeholder-font-colour(){
+	color: @darkgrey;
+}
+
+
+/* Focus Background Colour */
+.form-input-focus(){
+	background-color: @focus-colour;
+}
+
+/* Button Styling */
+.submit-button(){
+	.button();
+}
+
+/* Form Maximum Width */
+.form-max-width(){
+	max-width: 900px;
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+/* VALIDATION MIXINS */
+
+/* Top Message Styling */
+.form-validation-error-message(){
+	.form-border(@border: 0);
+	.form-border-radius();
+	background-color: @validation-colour!important;
+}
+
+/* Font Styling */
+.form-validation-font(){
+	.font-mon();
+	font-size: 10px!important;
+	line-height: 14px!important;
+	text-transform: uppercase!important;
+	letter-spacing: 0!important;
+	color: @darkgrey;
+}
+
+/* Input Box Styling */
+.form-validation-input(@border: 2px){
+	.form-border-radius();
+	border-color: @validation-colour!important;
+	border-width: @border!important;
+	border-style: solid!important;
+	background-color: @validation-colour!important;
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+/* GRAVITY FORM STYLING */
+
+/* Form Styling */
+.gf_browser_chrome, .gform_wrapper{margin: 0 auto; .form-max-width();
+	#gform_1{
+		.gform_body{
+			ul{
+				li{padding: 0!important; margin: 0 0 20px!important; width: 100%!important; max-width: 100%!important;
+					.ginput_container, .ginput_container_text, .ginput_container_textarea{margin: 0!important;
+						input, textarea{margin: 0!important; padding: 15px!important; .form-border-radius(); .form-font(); .form-border();
+							&:focus{.transition(); .form-input-focus();}
+						}
+						input{.form-input-height();}
+					}
+				}
+			}
+		}
+		.gform_footer{width: 100%; display: block; margin: 40px 0 0 0!important; padding: 0!important;
+			input[type=submit]{display: block!important; margin:0 auto!important; .submit-button();}
+		}
+	}
+}
+
+/* Half input Styling */
+.gf_browser_chrome, .gform_wrapper{
+	#gform_1{
+		.gform_body{
+			ul{
+				.grav_half_left{width: 49%!important; clear: none!important; float: left!important;}
+				.grav_half_right{width: 49%!important; clear: none!important; float: right!important;}	
+			}
+		}
+	}	
+}
+
+/* Placeholder Font Colour */
+::-webkit-input-placeholder{.placeholder-font-colour();}
+:-moz-placeholder{.placeholder-font-colour();}
+::-moz-placeholder{.placeholder-font-colour();}
+:-ms-input-placeholder{.placeholder-font-colour();}
+.placeholder{.placeholder-font-colour();}
+
+/* Validation Styling */
+.gform_validation_error{
+	#gform_1{	
+		.validation_error{padding: 15px; .form-font(); .form-validation-error-message();}
+		.gform_body{
+			ul{
+				li{.form-validation-input();
+					.gfield_description, .validation_message{padding: 10px 15px 8px; .form-validation-font();}
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////// */
+/* MEDIA QUERIES 800PX ////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+@media only screen and (max-width: 800px) {
+
+	
+	/* Half input Styling */
+	.gf_browser_chrome, .gform_wrapper{
+		#gform_1{
+			.gform_body{
+				ul{
+					.grav_half_left, .grav_half_right{width: 100%!important; float: left!important;}
+				}
+			}
+		}
+	}
+		
+		
+}
+
+
+
+
+
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////// */
+/* MEDIA QUERIES 500PX ////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+@media only screen and (max-width: 500px) {
+
+
+	/* FORM MIXINS */
+	
+	/* Font Styling */
+	.form-font(){
+		font-size: 12px!important;
+		line-height: 16px!important;
+	}
+	
+	/* Input Box Height */
+	.form-input-height(){
+		height: 45px!important;
+	}
+	
+	/* Button Styling */
+	.submit-button(){
+		padding: 15px 30px!important;
+		font-size: 12px!important;
+		line-height: 16px!important;
+		margin-top: -10px!important;
+	}
+	
+	
+	////////////////////////////////////////////////////////////////////////////////////////////////
+	
+	
+	/* GRAVITY FORM STYLING */
+	
+	/* Form Styling */
+	.gf_browser_chrome, .gform_wrapper{
+		#gform_1{
+			.gform_body{
+				ul{
+					li{margin: 0 0 15px!important;
+						.ginput_container, .ginput_container_text, .ginput_container_textarea{
+							input, textarea{.form-font();}
+							input{.form-input-height();}
+						}
+					}
+				}
+			}
+			.gform_footer{
+				input[type=submit]{.submit-button();}
+			}
+		}
+	}
+
+		
+}
+	
