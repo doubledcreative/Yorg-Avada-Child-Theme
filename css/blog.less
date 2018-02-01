@@ -1,0 +1,227 @@
+/*//////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+YORG DAIRY
+
+Theme Name: Avada Child Theme
+Author: Tom Brookes & Tom Dent
+Author URI: http://www.doubledcreative.com
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+CONTENTS
+
+- Media Queries
+	- 1400px
+	- 1024px
+	- 800px
+	- 500px
+	
+	
+//////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+/* SINGLE PAGE STYLING */
+
+/* Fusion Blog Element Styling */
+.post-template-default, .single, .single-post{	
+	#content{padding: 100px 12%!important; background-color: @grey;
+		li{margin-left: -25px;}
+		.fusion-imageframe{margin-bottom: 50px;}
+		.fusion-meta-info{border-color: @stone;
+			.fusion-meta-info-wrapper{
+				span, a{.font-mon(); font-size: 10px; color: @beige;}
+			}
+		}
+	}	
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+/* BLOG GRID */
+
+/* Fusion Blog Element Styling */
+.ddc-blog{
+	.blog-intro{padding: 0 5% 10px;}
+	.fusion-posts-container, .fusion-posts-container-pagination{
+		.fusion-post-medium, .category-recipes, .post{margin-bottom: 50px; border-bottom: solid 1px @stone;
+			&:last-of-type{margin-bottom: 0; padding-bottom: 0; border-bottom: none!important;}
+			
+			.flexslider{width: 15%!important; position: absolute; margin: 0!important;}
+			
+			.post-content{width: 85%!important; padding-left: 40px; margin-left: 15%;
+				h2{margin-bottom: 10px; letter-spacing: 0!important; font-weight: 600!important;}
+			}
+			
+			.fusion-meta-info{width: 75%!important; padding: 8px 0 40px 40px; margin-top: 0; border: none; margin-left: 15%; .font-mon(); font-size: 10px; color: @beige;}	
+		}	
+	}
+}
+
+/* Fusion Pagination Styling */
+.ddc-blog{
+	.fusion-blog-pagination{
+		.pagination{float: none; text-align: center;
+	
+			.pagination-prev, .pagination-next{.montserrat(); .uppercase(); color: @darkgrey;}
+		
+			.current{.montserrat(); .border-radius(); width: 36px; height: 36px; line-height: 26px;}
+			.inactive{.montserrat(); .border-radius(); width: 36px; height: 36px; line-height: 26px; border-color: @stone; background-color: @white;
+				&:hover{border-color: @stone; background-color: @stone; color: @white;}
+			}
+			
+		}	
+	}
+}
+
+
+
+
+
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////// */
+/* MEDIA QUERIES 1400px ///////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+@media only screen and (max-width: 1400px) {
+	
+	
+	/* BLOG GRID */
+	
+	/* Fusion Blog Element Styling */
+	.ddc-blog{
+		.fusion-posts-container, .fusion-posts-container-pagination{
+			.fusion-post-medium, .category-recipes, .post{
+				.flexslider{width: 20%!important;}
+				.post-content{width: 80%!important; margin-left: 20%;}	
+				.fusion-meta-info{width: 80%!important; margin-left: 20%;}	
+			}	
+		}
+	}
+	
+	
+}
+
+
+
+
+
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////// */
+/* MEDIA QUERIES 1024px ///////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+@media only screen and (max-width: 1024px) {
+	
+	
+	/* BLOG GRID */
+		
+	/* Fusion Blog Element Styling */
+	.ddc-blog{
+		.fusion-posts-container, .fusion-posts-container-pagination{
+			.fusion-post-medium, .category-recipes, .post{
+				.flexslider{width: 30%!important;}
+				.post-content{width: 70%!important; margin-left: 30%;}	
+				.fusion-meta-info{width: 70%!important; margin-left: 30%;}	
+			}	
+		}
+	}
+	
+	
+}
+
+
+
+
+
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////// */
+/* MEDIA QUERIES 800px ////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+@media only screen and (max-width: 800px) {
+
+
+	/* SINGLE PAGE STYLING */
+	
+	/* Fusion Blog Element Styling */
+	.post-template-default, .single, .single-post{	
+		#content{padding: 50px 12%!important;}	
+	}
+	
+
+	////////////////////////////////////////////////////////////////////////////////////////////////
+	
+	
+	/* BLOG GRID */
+	
+	/* Fusion Blog Element Styling */
+	.ddc-blog{
+		.blog-intro{padding: 0 5% 10px;}
+		.fusion-posts-container, .fusion-posts-container-pagination{
+			.fusion-post-medium, .category-recipes, .post{border-bottom: solid 1px @stone;	
+				&:last-of-type{margin-bottom: 0; padding-bottom: 0; border-bottom: none!important;}
+				.flexslider{width: auto!important; height: auto!important; margin: 0 0 30px 0!important; position: relative;}		
+				.post-content{width: 100%!important; padding-left: 0; margin-left: 0; display: inline-block!important;}
+				.fusion-meta-info{width: 100%!important; padding-left: 0; margin: 0; border: none;}		
+				
+			}		
+		}
+	}
+
+	
+}
+
+
+
+
+
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////// */
+/* MEDIA QUERIES 500px ////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+@media only screen and (max-width: 500px) {
+	
+	
+	/* SINGLE PAGE STYLING */
+
+	/* Fusion Blog Element Styling */
+	.post-template-default, .single, .single-post{	
+		#content{padding: 50px 30px!important;}	
+	}
+	
+	
+	////////////////////////////////////////////////////////////////////////////////////////////////
+
+	
+	/* BLOG GRID */	
+	
+	/* Fusion Blog Element Styling */
+	.ddc-blog{
+		.blog-intro{padding: 0 0 10px;}
+		.fusion-posts-container, .fusion-posts-container-pagination{
+			.fusion-post-medium, .category-recipes, .post{border-bottom: solid 1px @stone;	
+				&:last-of-type{margin-bottom: 0; padding-bottom: 0; border-bottom: none!important;}
+				.flexslider{width: auto!important; height: auto!important; margin: 0 0 30px 0!important; position: relative;}		
+				.post-content{width: 100%!important; padding-left: 0; margin-left: 0; display: inline-block!important;}
+				.fusion-meta-info{width: 100%!important; padding: 8px 0 35px; margin: 0; border: none;}		
+				
+			}		
+		}
+	}
+	
+	
+}
